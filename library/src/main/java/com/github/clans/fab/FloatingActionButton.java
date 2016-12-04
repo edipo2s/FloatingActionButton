@@ -369,20 +369,20 @@ public class FloatingActionButton extends ImageButton {
             circleInsetVertical += mProgressWidth;
         }
 
-        /*layerDrawable.setLayerInset(
-                mShowShadow ? 1 : 0,
+        layerDrawable.setLayerInset(
+                hasShadow() ? 2 : 1,
                 circleInsetHorizontal,
                 circleInsetVertical,
                 circleInsetHorizontal,
                 circleInsetVertical
-        );*/
-        layerDrawable.setLayerInset(
-                hasShadow() ? 2 : 1,
-                circleInsetHorizontal + iconOffset,
-                circleInsetVertical + iconOffset,
-                circleInsetHorizontal + iconOffset,
-                circleInsetVertical + iconOffset
         );
+//        layerDrawable.setLayerInset(
+//                hasShadow() ? 2 : 1,
+//                circleInsetHorizontal + iconOffset,
+//                circleInsetVertical + iconOffset,
+//                circleInsetHorizontal + iconOffset,
+//                circleInsetVertical + iconOffset
+//        );
 
         setBackgroundCompat(layerDrawable);
     }
